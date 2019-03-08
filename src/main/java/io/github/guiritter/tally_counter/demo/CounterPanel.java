@@ -1,4 +1,4 @@
-package io.github.guiritter.tallycounter.demo;
+package io.github.guiritter.tally_counter.demo;
 
 import java.awt.Dimension;
 import javax.swing.BoxLayout;

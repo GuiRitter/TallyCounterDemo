@@ -1,16 +1,16 @@
-package io.github.guiritter.tallycounter.demo;
+package io.github.guiritter.tally_counter.demo;
 
-import io.github.guiritter.tallycounter.TallyCounter.Type;
-import static io.github.guiritter.tallycounter.TallyCounter.Type.NORMAL;
-import static io.github.guiritter.tallycounter.TallyCounter.Type.UNIQUE_COMBINATION;
-import static io.github.guiritter.tallycounter.TallyCounter.Type.UNIQUE_NUMBERS;
+import io.github.guiritter.tally_counter.TallyCounter.Type;
+import static io.github.guiritter.tally_counter.TallyCounter.Type.NORMAL;
+import static io.github.guiritter.tally_counter.TallyCounter.Type.UNIQUE_COMBINATION;
+import static io.github.guiritter.tally_counter.TallyCounter.Type.UNIQUE_NUMBERS;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
  * Types combo box item that links
- * {@link io.github.guiritter.tallycounter.TallyCounter.Type}
+ * {@link io.github.guiritter.tally_counter.TallyCounter.Type}
  * to its {@link java.lang.String} representation.
  * @author Guilherme Alan Ritter
  */

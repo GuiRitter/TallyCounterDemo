@@ -1,4 +1,4 @@
-package io.github.guiritter.tallycounter.demo;
+package io.github.guiritter.tally_counter.demo;
 
 import java.awt.Dimension;
 import java.beans.PropertyChangeEvent;
@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- * Wraps a Swing {@link java.awt.JComponent}
+ * Wraps a Swing {@link javax.swing.JComponent}
  * in a {@link javax.swing.JPanel} with a {@link javax.swing.JLabel}
  * using the {@link javax.swing.BoxLayout}.
  * @author Guilherme Alan Ritter
@@ -19,7 +19,7 @@ public final class LabelledComponentFactory {
     /**
      * Builds a {@link javax.swing.JPanel}
      * containing a {@link javax.swing.JLabel} with the specified text
-     * and the specified {@link java.awt.JComponent}.
+     * and the specified {@link javax.swing.JComponent}.
      * @param title the text to be displayed by the {@link javax.swing.JLabel}
      * @param component to be displayed below the {@link javax.swing.JLabel}
      * @param componentAlignment X alignment from {@link javax.swing.SwingConstants}

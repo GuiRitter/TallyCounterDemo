@@ -1,16 +1,16 @@
-package io.github.guiritter.tallycounter.demo;
+package io.github.guiritter.tally_counter.demo;
 
-import io.github.guiritter.tallycounter.demo.Main.OverflowPolicy;
-import static io.github.guiritter.tallycounter.demo.Main.OverflowPolicy.CLEAR;
-import static io.github.guiritter.tallycounter.demo.Main.OverflowPolicy.KEEP;
-import static io.github.guiritter.tallycounter.demo.Main.OverflowPolicy.SET;
+import io.github.guiritter.tally_counter.demo.Main.OverflowPolicy;
+import static io.github.guiritter.tally_counter.demo.Main.OverflowPolicy.CLEAR;
+import static io.github.guiritter.tally_counter.demo.Main.OverflowPolicy.KEEP;
+import static io.github.guiritter.tally_counter.demo.Main.OverflowPolicy.SET;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
  * OverflowPolicies combo box item that links
- * {@link io.github.guiritter.tallycounter.demo.Main.OverflowPolicy}
+ * {@link io.github.guiritter.tally_counter.demo.Main.OverflowPolicy}
  * to its {@link java.lang.String} representation.
  * @author Guilherme Alan Ritter
  */

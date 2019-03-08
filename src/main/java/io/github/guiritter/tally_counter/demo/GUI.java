@@ -1,7 +1,7 @@
-package io.github.guiritter.tallycounter.demo;
+package io.github.guiritter.tally_counter.demo;
 
-import io.github.guiritter.tallycounter.TallyCounter;
-import static io.github.guiritter.tallycounter.demo.Main.OverflowPolicy.KEEP;
+import io.github.guiritter.tally_counter.TallyCounter;
+import static io.github.guiritter.tally_counter.demo.Main.OverflowPolicy.KEEP;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -30,10 +30,8 @@ import javax.swing.event.DocumentListener;
 /**
  * Shows the graphical user interface window.
  * @author Guilherme Alan Ritter
- * @param <TypeType>
- * @param <OverflowPolicyType>
  */
-public abstract class GUI<TypeType, OverflowPolicyType> {
+public abstract class GUI {
 
     private final JSpinner amountSpinner;
 
@@ -55,7 +53,7 @@ public abstract class GUI<TypeType, OverflowPolicyType> {
 
     private final JSpinner maximumSpinner;
 
-    private final JComboBox<OverflowPolicyType> overflowPolicyComboBox;
+    private final JComboBox<OverflowPolicyItem> overflowPolicyComboBox;
 
     private final JTextField overflowValueField;
 
@@ -63,7 +61,7 @@ public abstract class GUI<TypeType, OverflowPolicyType> {
 
     public static final int spaceLargeValue;
 
-    private final JComboBox<TypeType> typeComboBox;
+    private final JComboBox<TypeItem> typeComboBox;
 
     static {
         JFrame.setDefaultLookAndFeelDecorated(true);
@@ -100,7 +98,7 @@ public abstract class GUI<TypeType, OverflowPolicyType> {
         return maximumArrayField.getText();
     }
 
-    public final OverflowPolicyType getOverflowPolicy() {
+    public final OverflowPolicyItem getOverflowPolicy() {
         return overflowPolicyComboBox.getItemAt(
          overflowPolicyComboBox.getSelectedIndex());
     }
@@ -121,7 +119,7 @@ public abstract class GUI<TypeType, OverflowPolicyType> {
      * {@link javax.swing.JComponent}s,
      * based on the preferred width of a {@link javax.swing.JLabel}.
      * The text of this label contains
-     * either the least or the most wide character up to <code>\u00ff<code>.
+     * either the least or the most wide character up to {@code \u00ff}.
      * @param small <code>true</code> for least wide character,
      * <code>false</code> otherwise
      * @return the size of the space to be used between components
@@ -142,7 +140,7 @@ public abstract class GUI<TypeType, OverflowPolicyType> {
         return space;
     }
 
-    public final TypeType getType() {
+    public final TypeItem getType() {
         return typeComboBox.getItemAt(typeComboBox.getSelectedIndex());
     }
 
@@ -211,8 +209,8 @@ public abstract class GUI<TypeType, OverflowPolicyType> {
         JOptionPane.showMessageDialog(frame, message, title, messageType);
     }
 
-    public GUI(String title, TypeType typeItems[],
-     OverflowPolicyType overflowPolicyItems[]) {
+    public GUI(String title, TypeItem typeItems[],
+     OverflowPolicyItem overflowPolicyItems[]) {
         frame = new JFrame(title);
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         BoxLayout layout

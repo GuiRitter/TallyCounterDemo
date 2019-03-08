@@ -1,14 +1,14 @@
-package io.github.guiritter.tallycounter.demo;
+package io.github.guiritter.tally_counter.demo;
 
-import io.github.guiritter.tallycounter.TallyCounter;
+import io.github.guiritter.tally_counter.TallyCounter;
 import javax.swing.JOptionPane;
 
 /**
  * Demonstration's main class. Allows a TallyCounter to be built
  * with one of the 4 ways available, shows the counter's values, allows it
  * to be incremented and reset. Manages the
- * {@link io.github.guiritter.tallycounter.TallyCounter} and the
- * {@link io.github.guiritter.tallycounter.demo.GUI}.
+ * {@link io.github.guiritter.tally_counter.TallyCounter} and the
+ * {@link io.github.guiritter.tally_counter.demo.GUI}.
  * @author Guilherme Alan Ritter
  */
 @SuppressWarnings("CallToPrintStackTrace")
@@ -16,7 +16,7 @@ public final class Main {
 
     private static TallyCounter counter;
 
-    private static final GUI<TypeItem, OverflowPolicyItem> gui;
+    private static final GUI gui;
 
     /**
      * <code>true</code> for TallyCounter built, <code>false</code> otherwise.
@@ -26,7 +26,7 @@ public final class Main {
     /**
      * What will happen with the value of the overflow flag
      * when the user resets the
-     * {@link io.github.guiritter.tallycounter.TallyCounter}.
+     * {@link io.github.guiritter.tally_counter.TallyCounter}.
      */
     public enum OverflowPolicy {
 
@@ -53,7 +53,7 @@ public final class Main {
     }
 
     static {
-        gui = new GUI<TypeItem, OverflowPolicyItem>("TallyCounter Demo",
+        gui = new GUI("TallyCounter Demo",
          TypeItem.getArray(), OverflowPolicyItem.getArray()) {
 
             private void setCounterText() {
