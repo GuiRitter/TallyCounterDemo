@@ -1,21 +1,23 @@
 package io.github.guiritter.tally_counter.demo;
 
-import io.github.guiritter.tally_counter.TallyCounter;
+import static io.github.guiritter.graphical_user_interface.LabelledComponentFactory.buildLabelledComponent;
 import static io.github.guiritter.tally_counter.demo.Main.OverflowPolicy.KEEP;
+import static javax.swing.BorderFactory.createTitledBorder;
+import static javax.swing.BoxLayout.X_AXIS;
+import static javax.swing.BoxLayout.Y_AXIS;
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
+
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
-import static javax.swing.BorderFactory.createTitledBorder;
+
 import javax.swing.Box;
 import javax.swing.BoxLayout;
-import static javax.swing.BoxLayout.X_AXIS;
-import static javax.swing.BoxLayout.Y_AXIS;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
-import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -26,6 +28,8 @@ import javax.swing.UIManager;
 import javax.swing.border.TitledBorder;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+
+import io.github.guiritter.tally_counter.TallyCounter;
 
 /**
  * Shows the graphical user interface window.
@@ -225,7 +229,7 @@ public abstract class GUI {
         panel.add(createRigidArea());
 
         typeComboBox = new JComboBox<>(typeItems);
-        panel.add(LabelledComponentFactory.buildLabelledComponent(
+        panel.add(buildLabelledComponent(
          "Type", typeComboBox, Component.LEFT_ALIGNMENT,
          Component.BOTTOM_ALIGNMENT, spaceSmall));
         panel.add(createRigidArea());
@@ -233,7 +237,7 @@ public abstract class GUI {
         amountSpinner = new JSpinner();
         amountSpinner.setModel(
          new SpinnerNumberModel(9, 1, Integer.MAX_VALUE, 1));
-        panel.add(LabelledComponentFactory.buildLabelledComponent(
+        panel.add(buildLabelledComponent(
          "Digit Amount", amountSpinner, Component.LEFT_ALIGNMENT,
          Component.BOTTOM_ALIGNMENT, spaceSmall));
         panel.add(createRigidArea());
@@ -249,7 +253,7 @@ public abstract class GUI {
         maximumSpinner = new JSpinner();
         maximumSpinner.setModel(
          new SpinnerNumberModel(9, 1, Long.MAX_VALUE, 1));
-        panel.add(LabelledComponentFactory.buildLabelledComponent(
+        panel.add(buildLabelledComponent(
          "Maximum value", maximumSpinner, Component.LEFT_ALIGNMENT,
          Component.BOTTOM_ALIGNMENT, spaceSmall));
         panel.add(createRigidArea());
@@ -281,7 +285,7 @@ public abstract class GUI {
                 setEnabledExclusive();
             }
         });
-        panel.add(LabelledComponentFactory.buildLabelledComponent(
+        panel.add(buildLabelledComponent(
          "Maximum value array", maximumArrayField, Component.LEFT_ALIGNMENT,
          Component.BOTTOM_ALIGNMENT, spaceSmall));
         panel.add(createRigidArea());
@@ -352,14 +356,14 @@ public abstract class GUI {
 
         overflowValueField = new JTextField();
         overflowValueField.setEditable(false);
-        panel.add(LabelledComponentFactory.buildLabelledComponent(
+        panel.add(buildLabelledComponent(
          "Overflow value", overflowValueField, Component.LEFT_ALIGNMENT,
          Component.BOTTOM_ALIGNMENT, spaceSmall));
         panel.add(createRigidArea());
 
         overflowPolicyComboBox = new JComboBox<>(overflowPolicyItems);
         overflowPolicyComboBox.setSelectedItem(OverflowPolicyItem.getByValue(KEEP));
-        panel.add(LabelledComponentFactory.buildLabelledComponent(
+        panel.add(buildLabelledComponent(
          "Overflow policy", overflowPolicyComboBox, Component.LEFT_ALIGNMENT,
          Component.BOTTOM_ALIGNMENT, spaceSmall));
         panel.add(createRigidArea());

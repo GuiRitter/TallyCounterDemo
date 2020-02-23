@@ -55,6 +55,8 @@ public final class CounterPanel {
         for (i = 0; i < digitAmount; i++) {
             digitArray[i] = new JTextField() {
 
+                private static final long serialVersionUID = 2257097059033591424L;
+
                 @Override
                 public Dimension getMinimumSize() {
                     return getPreferredSize();

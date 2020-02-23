@@ -45,6 +45,12 @@
       <artifactId>TallyCounter</artifactId>
       <version>master-SNAPSHOT</version>
     </dependency>
+
+    <dependency>
+      <groupId>com.github.GuiRitter</groupId>
+      <artifactId>GraphicalUserInterface</artifactId>
+      <version>master-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 
   <build>
